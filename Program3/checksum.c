@@ -6,7 +6,7 @@ unsigned short checksum()
 {
     int i;
     int sum=0;
-    printf("Enter the IP header information in 16 bit words\n");
+    printf("Enter teh IP header information in 16 bit words\n");
 
     for(i=0;i<9;i++){
         printf("Field %d\n",i+1);

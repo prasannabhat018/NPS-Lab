@@ -35,7 +35,7 @@ int main()
     if (bind(listenfd,(struct sockaddr *)&address,sizeof(address)) == 0)
     printf("Binding Socket\n");
     listen(listenfd,3);
-     printf("server is listening on %s\n",inet_ntoa(address.sin_addr));
+     printf("server is listening\n");
 for(;;){
     addrlen = sizeof(struct sockaddr_in);
     connfd = accept(listenfd,(struct sockaddr *)&address,&addrlen);
@@ -44,14 +44,9 @@ for(;;){
             printf("The Client %s is Connected...\n",
             inet_ntoa(address.sin_addr) );
     }
-     if((pid=fork())==0)
-     {
-	 printf("inside child\n");
-	  close(listenfd);
+     
 	   str_echo(connfd);
-	   exit(0);
-	}
-      
+	      
     close(connfd);}
     return 0 ;
 }
