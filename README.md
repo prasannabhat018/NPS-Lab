@@ -1,2 +1,2 @@
 # NPS-Lab
-This is the repositories containing all the repositories for NPS lab
+This is the repositories containing all the programs for NPS lab 2021 RVCE
